@@ -19,8 +19,8 @@
 
 using u16 = std::uint16_t;
 
-static list_pool<u16, u16> pool;
-using list_type = typename list_pool<u16, u16>::list_type;
+static rks::list_pool<u16, u16> pool;
+using list_type = typename rks::list_pool<u16, u16>::list_type;
 std::vector<u16> object;
 static const char* program_name = "lc3al";
 static int error_count = 0;
@@ -750,5 +750,5 @@ int main(int argc, char** argv)
     }
 
     std::ostream_iterator<unsigned char> f_o(object_file);
-    for (u16 x : object) f_o = store_big_endian(x, f_o);
+    for (u16 x : object) f_o = rks::store_big_endian(x, f_o);
 }

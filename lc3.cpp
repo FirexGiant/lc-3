@@ -86,10 +86,10 @@ int main(int argc, char** argv)
     std::istream_iterator<unsigned char> f_i(object_file);
     std::istream_iterator<unsigned char> l_i{};
     u16 program_counter;
-    f_i = load_big_endian(program_counter, f_i);
+    f_i = rks::load_big_endian(program_counter, f_i);
     u16* memory_cursor = memory + program_counter;
     while (f_i != l_i) {
-        f_i = load_big_endian(*memory_cursor, f_i);
+        f_i = rks::load_big_endian(*memory_cursor, f_i);
         ++memory_cursor;
     }
 
