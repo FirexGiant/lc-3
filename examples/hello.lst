@@ -1,0 +1,23 @@
+0000 3000 (0001)		.orig $3000
+3000 ea00 (0002)		lea r5 hello
+3001 ec00 (0003)		lea r6, hello
+3002 ee00 (0004)		lea r7, hello ; end of line comment
+3003 f022 (0005)		puts
+3004 f025 (0006)		HALT
+3005 0048 (0007)	hello:	.STRINGZ "Hello, World"
+3006 0065
+3007 006c
+3008 006c
+3009 006f
+300a 002c
+300b 0020
+300c 0057
+300d 006f
+300e 0072
+300f 006c
+3010 0064
+3011 0000
+
+Symbol Table
+------------
+(0007) 3005 hello

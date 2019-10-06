@@ -1,0 +1,3 @@
+	.ORIG $FFF0
+	;.BLKW $10
+.STRINGZ "0123456789abcdef"

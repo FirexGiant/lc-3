@@ -1,0 +1,4 @@
+	.ORIG	$3000
+	ADD	%0	%0	#1
+	HALT
+	.END
