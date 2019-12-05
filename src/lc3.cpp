@@ -1,10 +1,11 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <cstdint>
 #include <cstdlib>
 #include <cstring>
 #include <cstdio>
 #include <fstream>
 #include <iterator>
-#include "rks/endian.h"
+#include "endian.h"
 
 using u16 = std::uint16_t;
 

@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <cassert>
 #include <cctype>
 #include <cstdarg>
@@ -14,8 +15,8 @@
 #include <string>
 #include <type_traits>
 #include <vector>
-#include "rks/list_pool.h"
-#include "rks/endian.h"
+#include "list_pool.h"
+#include "endian.h"
 
 using u16 = std::uint16_t;
 
@@ -253,7 +254,8 @@ symbol_t& get_symbol(const char* f, const char* l)
             return std::equal(symbol.name.begin(), symbol.name.end(), f, l);
         });
     if (iter != symbols.end()) return *iter;
-    return symbols.emplace_back(std::string(f, l), 0, 0);
+    symbols.emplace_back(std::string(f, l), 0, 0);
+    return symbols.back();
 }
 
 static inline
