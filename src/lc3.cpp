@@ -5,6 +5,7 @@
 #include <cstdio>
 #include <fstream>
 #include <iterator>
+#include <limits>
 #include "endian.h"
 
 using u16 = std::uint16_t;
