@@ -587,7 +587,7 @@ const opcode_t* get_opcode(const char* f, const char* l)
         [f, l](const opcode_t& op) {
             return std::equal(op.name.begin(), op.name.end(), f, l,
                               [](const char x, const char y) {
-                                  return x == std::toupper(y);
+                                  return std::toupper(x) == std::toupper(y);
                               });
         });
     return iter;

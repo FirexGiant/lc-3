@@ -1,8 +1,6 @@
 	.orig $3000
-	lea r5 hello
-	lea r6, hello
-	lea r7, hello ; end of line comment
+	lea r0, hello ; end of line comment
 	puts
 	HALT
-hello:	.STRINGZ "Hello, World"
+hello:	.STRINGZ "Hello,World" ; TODO handle spaces
 	.END
